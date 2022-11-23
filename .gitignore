@@ -1,0 +1,15 @@
+# venv files
+bin/
+lib/
+lib64
+share/
+pyvenv.cfg
+
+# pycache
+__pycache__/
+
+# for experiments
+results/
+
+# jupyter
+.ipynb_checkpoints/

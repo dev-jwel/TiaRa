@@ -1,0 +1,20 @@
+{
+	"model" : "GCN",
+	"dataset" : "DBLP5",
+	"augment_method" : "tiara",
+
+	"epochs" : 1000,
+	"early_stopping" : 100,
+
+	"input_dim" : 100,
+	"hidden_dim" : 100,
+	"output_dim" : 100,
+
+	"num_layers" : 2,
+	"lr" : 0.01,
+	"dropout": 0.5,
+	"alpha" : 0.001,
+	"beta" : 0.009,
+	"eps" : 0.001,
+	"symmetric_trick" : true
+}

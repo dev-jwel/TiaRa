@@ -1,0 +1,21 @@
+{
+	"model" : "GCRN",
+	"dataset" : "DBLP3",
+	"augment_method" : "tiara",
+
+	"epochs" : 1000,
+	"early_stopping" : 100,
+
+	"input_dim" : 100,
+	"hidden_dim" : 100,
+	"output_dim" : 100,
+
+	"num_layers" : 2,
+	"lr" : 0.02,
+	"rnn" : "LSTM",
+	"dropout": 0,
+	"alpha" : 0.4,
+	"beta" : 0.5,
+	"eps" : 0.001,
+	"symmetric_trick" : false
+}

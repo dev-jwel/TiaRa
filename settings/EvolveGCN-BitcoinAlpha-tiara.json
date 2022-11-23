@@ -1,0 +1,17 @@
+{
+	"model" : "EvolveGCN",
+	"dataset" : "BitcoinAlpha",
+	"augment_method" : "tiara",
+
+	"epochs" : 200,
+	"early_stopping" : 50,
+
+	"num_layers" : 3,
+	"lr" : 0.01,
+	"rnn" : "LSTM",
+	"dropout": 0.5,
+	"alpha" : 0.1,
+	"beta" : 0.4,
+	"eps" : 0.001,
+	"symmetric_trick" : true
+}

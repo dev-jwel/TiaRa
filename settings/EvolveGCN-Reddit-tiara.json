@@ -1,0 +1,21 @@
+{
+	"model" : "EvolveGCN",
+	"dataset" : "Reddit",
+	"augment_method" : "tiara",
+
+	"epochs" : 1000,
+	"early_stopping" : 100,
+
+	"input_dim" : 20,
+	"hidden_dim" : 20,
+	"output_dim" : 20,
+
+	"num_layers" : 2,
+	"lr" : 0.02,
+	"rnn" : "LSTM",
+	"dropout": 0.05,
+	"alpha" : 0.002,
+	"beta" : 0.008,
+	"eps" : 0.001,
+	"symmetric_trick" : false
+}

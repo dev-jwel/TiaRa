@@ -1,0 +1,23 @@
+{
+	"model" : "EvolveGCN",
+	"dataset" : "Brain",
+	"augment_method" : "tiara",
+
+	"epochs" : 1000,
+	"early_stopping" : 100,
+
+	"input_dim" : 20,
+	"hidden_dim" : 20,
+	"output_dim" : 20,
+
+	"dense" : true,
+
+	"num_layers" : 2,
+	"lr" : 0.01,
+	"rnn" : "LSTM",
+	"dropout": 0,
+	"alpha" : 0.1,
+	"beta" : 0.5,
+	"eps" : 0.001,
+	"symmetric_trick" : false
+}

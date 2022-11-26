@@ -1,6 +1,17 @@
 # TiaRa
 
-This repository contains a PyTorch implementaion of TiaRa of the paper titled "Time-aware Random Walk Diffusion to Improve Dynamic Graph Learning" submitted to AAAI-23.
+This is the official implementation of **TiaRa** (Time-aware Random Walk Diffusion), which is described in the following paper:
+* **Time-aware Random Walk Diffusion to Improve Dynamic Graph Learning** </br>Jong-whi Lee and Jinhong Jung </br>37-th AAAI Conference on Artificial Intelligence (AAAI-23), Washington, DC, USA
+
+## Overview
+How can we augment a dynamic graph for improving the performance of dynamic graph neural networks? 
+
+Graph augmentation has been widely utilized to boost the learning performance of GNN-based models. 
+However, most existing approaches only enhance spatial structure within an input static graph by transforming the graph, and do not consider dynamics caused by time such as temporal locality, i.e., recent edges are more influential than earlier ones, which remains challenging for dynamic graph augmentation. 
+
+In this work, we propose TiaRa (Time-aware Random Walk Diffusion), a novel diffusion-based method for augmenting a dynamic graph represented as a discrete-time sequence of graph snapshots. 
+For this purpose, we first design a time-aware random walk proximity so that a surfer can walk along the time dimension as well as edges, resulting in spatially and temporally localized scores. 
+We then derive our diffusion matrices based on the time-aware random walk, and show they become enhanced adjacency matrices that both spatial and temporal localities are augmented. 
 
 ## Prerequisites
 
@@ -20,7 +31,7 @@ We provide datasets and preprocessing code used in the paper. The current `./dat
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |[BitcoinAlpha](https://snap.stanford.edu/data/soc-sign-bitcoin-alpha.html)|3,783|31,748|138|32|2|Link|
 |[WikiElec](https://snap.stanford.edu/data/wiki-Elec.html)|7,125|212,854|100|32|2|Link|
-|[RedditBody](https://snap.stanford.edu/data/soc-RedditHyperlinks.html)|7,125|212,854|100|32|2|Link|
+|[RedditBody](https://snap.stanford.edu/data/soc-RedditHyperlinks.html)|35,776|484,460|88|32|2|Link|
 |[Brain](https://tinyurl.com/y67ywq6j)|5,000|1,955,488|12|20|10|Node|
 |[DBLP3](https://tinyurl.com/y67ywq6j)|4,257|23,540|10|100|3|Node|
 |[DBLP5](https://tinyurl.com/y67ywq6j)|6,606|42,815|10|100|5|Node|

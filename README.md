@@ -1,7 +1,7 @@
 # TiaRa
 
 This is the official implementation of **TiaRa** (Time-aware Random Walk Diffusion), which is described in the following paper:
-* **Time-aware Random Walk Diffusion to Improve Dynamic Graph Learning** </br>Jong-whi Lee and Jinhong Jung </br>37-th AAAI Conference on Artificial Intelligence (AAAI-23), Washington, DC, USA
+* **Time-aware Random Walk Diffusion to Improve Dynamic Graph Learning** </br>Jong-whi Lee and Jinhong Jung </br>37-th AAAI Conference on Artificial Intelligence (AAAI) 2023, Washington, DC, USA
 
 ## Overview
 How can we augment a dynamic graph for improving the performance of dynamic graph neural networks? 

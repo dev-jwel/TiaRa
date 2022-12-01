@@ -129,13 +129,16 @@ You may import or copy the `TiaRa` class in your work.
 Each augmenter including `TiaRa` takes its parameters at initialization.
 The dynamic graph (or a list of graph snapshot) is augmented by calling the augmenter object.
 Each graph snapshot in the dynamic graph should be a [dgl](https://github.com/dmlc/dgl) object.
-You may refer to our implementation in [`src/dataset_loader`](https://github.com/dev-jwel/Tiara/blob/master/src/dataset_loader) in order to check how it processes raw datasets.
+You may refer to our implementation in [`src/dataset_loader`](https://github.com/dev-jwel/Tiara/blob/master/src/dataset_loader) in order to check how it preprocesses raw datasets.
 
 We also provide the usage of `TiaRa` in the following example:
 ```python
-# original_dynamic_graph is a list of graph snapshots where each snapshot is a dgl object
+# `original_dynamic_graph` is a list of graph snapshots where each snapshot is a dgl object
+
 tiara = TiaRa(alpha=0.2, beta=0.3, eps=1e-3, K=100, device='cuda')
 augmented_dynamic_graph = tiara(original_dynamic_graph)
+
+# feed `augmented_dynamic_graph` forward to a dynamic GNN model
 ```
 
 ## Information of other implementations

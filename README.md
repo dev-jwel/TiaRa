@@ -4,7 +4,7 @@ This is the official implementation of **TiaRa** (Time-aware Random Walk Diffusi
 * **Time-aware Random Walk Diffusion to Improve Dynamic Graph Learning** </br>Jong-whi Lee and Jinhong Jung </br>37-th AAAI Conference on Artificial Intelligence (AAAI) 2023, Washington, DC, USA
 
 The paper is publicly accessible in the following link:
-* arXiv: https://arxiv.org/abs/2211.01214.
+* arXiv: https://arxiv.org/abs/2211.01214
 
 ## Overview
 How can we augment a dynamic graph for improving the performance of dynamic graph neural networks? 
@@ -122,19 +122,20 @@ The following table summarizes options related to GNN models.
 * `model`: {GCRN, EvolveGCN, GCN}
 * `rnn`: {LSTM, GRU}
 
-## Implementation details
+## How to use `TiaRa` in My Code
 
-In this implementation, `TiaRa` class in [`src/augmenter.py`](https://github.com/dev-jwel/Tiara/blob/master/src/augmenter.py) contains our proposed augmentation method.
-You may copy this file or `TiaRa` class in your work.
-Our implementation of augmenters including `TiaRa` takes its parameter at initialization.
-The temporal graph (or list of graph) can be augmented by calling the augmenter object.
-Each single graph in temporal graph should be [dgl](https://github.com/dmlc/dgl) object.
-You may use or refer our implementation in [`src/dataset_loader`](https://github.com/dev-jwel/Tiara/blob/master/src/dataset_loader) to process raw dataset.
+`TiaRa` class in [`src/augmenter.py`](https://github.com/dev-jwel/Tiara/blob/master/src/augmenter.py) contains the implementation of our proposed method.
+You may import or copy the `TiaRa` class in your work.
+Each augmenter including `TiaRa` takes its parameters at initialization.
+The dynamic graph (or a list of graph snapshot) is augmented by calling the augmenter object.
+Each graph snapshot in the dynamic graph should be a [dgl](https://github.com/dmlc/dgl) object.
+You may refer to our implementation in [`src/dataset_loader`](https://github.com/dev-jwel/Tiara/blob/master/src/dataset_loader) in order to check how it processes raw datasets.
 
-We also provides usage of `TiaRa` in following example:
+We also provide the usage of `TiaRa` in the following example:
 ```python
-tiara = TiaRa(alpha=0.2, beta=0.3, K=100, device='cuda')
-augmented_temporal_graph = tiara(original_temporal_graph)
+# original_dynamic_graph is a list of graph snapshots where each snapshot is a dgl object
+tiara = TiaRa(alpha=0.2, beta=0.3, eps=1e-3, K=100, device='cuda')
+augmented_dynamic_graph = tiara(original_dynamic_graph)
 ```
 
 ## Information of other implementations

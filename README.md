@@ -138,7 +138,7 @@ We also provide the usage of `TiaRa` in the following example:
 tiara = TiaRa(alpha=0.2, beta=0.3, eps=1e-3, K=100, device='cuda')
 augmented_dynamic_graph = tiara(original_dynamic_graph)
 
-# feed `augmented_dynamic_graph` forward to a dynamic GNN model
+# `augmented_dynamic_graph` is also a list of (augmented) graph snapshots, and fed to a dynamic GNN model
 ```
 
 ## Information of other implementations
